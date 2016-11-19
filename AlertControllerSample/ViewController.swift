@@ -14,17 +14,18 @@ class ViewController: UIViewController {
         print("push OK Button")
     }
     
-    @IBAction func pushButton(_ sender: AnyObject) {
+    @IBAction func pushButton(_ sender: Any) {
         //アラートコントローラ生成
-        let alertController = UIAlertController(title: "タイトル", message: "メッセージ", preferredStyle: UIAlertControllerStyle.actionSheet)
+        let alertController = UIAlertController(title: "タイトル", message: "メッセージ", preferredStyle: UIAlertControllerStyle.alert)
         
-        //通常アクション生成
-        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {(sender:UIAlertAction!) in
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:
+            {(sender:UIAlertAction!) in
                 print("push OK Button")
             }
         )
         
-        //let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: pushAlertOKButton)
+        //let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: pushAlertOKButton)
+
         //キャンセルアクション生成
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
         //デストラクティブアクション生成
